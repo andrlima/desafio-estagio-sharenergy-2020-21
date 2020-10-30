@@ -4,17 +4,18 @@
    A [Sharenergy](https://sharenergy.com.br/) é uma start-up que atua no ramo de usinas solares compartilhadas de pequeno porte. Nesse setor, a receita gerada pela venda da energia elétrica gerada por uma usina fotovotaica é divida por vários investidores. O modelo de negócios compartilhado é especialmente interessante em setores cujos investimentos requerme alto capital e demandam longo tempo para retorno do invesimento, pois reduz o capital inicial necessário de cada investidor.
 ## O desafio
    Criar um aplicativo para Web que atenda às demandas listadas abaixo. O aplicativo deve apresentar uma interface amigável e bonita.
-### Parte 1: tratamento de dados de uma usina fotovoltaica
-   O aplicativo deve ser capaz de ler dados de um arquivo fornecido pelo usuário. 
+### Parte 1: visualização de dados de uma usina fotovoltaica
+   O aplicativo deve ser capaz de ler dados de um arquivo fornecido pelo usuário / objeto (ou array) que forneci. 
    Plotar gráfico das variáveis em função do tempo
-   Opção de escolher curva que será mostrada
-   Calcular energia a partir da potência
+   Opção de escolher curva que será mostrada. Usuário deve escolher em lista suspensa ou check box qual dos parâmetros será mostrado no gràfico.
 ### Parte 2: gerenciameno de clientes
  Clientes...
  Usar dados de arquivo... iniciar banco de dados
  CRUD...
 ### Parte 3: receita de clientes
- Calcular receita de cada cliente...
+   Calcular energia produzida no dia a partir das informações de potência
+   Lmebre-se que Energia = integral(Potência(t), t1, t2) ~ (t2 - t1)*somatório(Potência(ti))
+   Calcular receita de cada cliente... considerar R$0,95 / kWh 
 ### Opcional
    O aplicativo do desafio pode ser enriquecido com recursos pensados por você. Algumas sugestões:
 * Documentação
