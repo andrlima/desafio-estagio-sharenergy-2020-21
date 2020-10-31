@@ -13,12 +13,22 @@
  Usar dados de arquivo... iniciar banco de dados
  CRUD...
 ### Parte 3: receita de clientes
-   Calcular energia produzida no dia a partir das informações de potência
-   Lmebre-se que Energia = integral(Potência(t), t1, t2) ~ (t2 - t1)*somatório(Potência(ti))
-   Calcular receita de cada cliente... considerar R$0,95 / kWh 
+   Calcular energia produzida no dia a partir das informações de potência.
+   Calcular receita de cada cliente... considerar R$0,95 / kWh.
+   Lembre-se que, por definição, a potência P (kW) é a derivada no tempo t (h) da energia E (kWh), P = dE/dt. Portanto, a energia pode ser calculada a partir da potência por:
+   ![Equação](http://www.sciweavers.org/tex2img.php?eq=%20%5CDelta%20E%20%3D%20%5Cint_%7Bt_0%7D%5E%7Bt_f%7DP%28t%29dt%20%20%5Capprox%20%5CDelta%20t%20%20%5Csum_%7Bi%20%3D%201%7D%5E%7BN-1%7D%20P%28t_i%29%20&bc=White&fc=Black&im=jpg&fs=12&ff=arev&edit=0)
+   <!--
+      Imagem gerada pelo site: http://www.sciweavers.org/free-online-latex-equation-editor
+      Foi usado o comando LaTeX: " \Delta E = \int_{t_0}^{t_f}P(t)dt  \approx \Delta t  \sum_{i = 1}^{N-1} P(t_i) "
+      Font: Arev (padrão), Font size: 12
+   -->
+   Em que ΔE é a energia gerada (kWh), t<sub>0</sub> é o instante de tempo inicial (h), t<sub>f</sub> é o instante de tempo final (h), Δt é o intervalo de tempo em que os dados são amostrados (h), i indica a posição do dado no registro (i = 1, ..., N) e N é o número total de dados amostrados.  
 ### Opcional
    O aplicativo do desafio pode ser enriquecido com recursos pensados por você. Algumas sugestões:
 * Documentação
+* Estatística descritiva dos dados dos gráficos
+* Formulário de clientes com mais campos
+* Validação dos dados 
 * ...
 ## Quais ferramentas posso usar?
     Não será especificado... código que já faça o mesmo...
@@ -29,12 +39,14 @@
 * Banco de dados: [MongoDB](https://www.mongodb.com/) do lado do servidor e [Minimongo](https://guide.meteor.com/collections.html) do lado do cliente
 * Validação de dados: [Schema-utils](https://www.npmjs.com/package/schema-utils) 
 * Framework para front-end: [React JS](https://pt-br.reactjs.org/)
-* UI: [Material-UI](https://material-ui.com/pt/) e [Reflebox](https://rebassjs.org/reflexbox/)
+* UI: [CSS 3](https://www.w3.org/Style/CSS/), [Material-UI](https://material-ui.com/pt/) e [Reflebox](https://rebassjs.org/reflexbox/)
 * Gráficos: [Victory](https://formidable.com/open-source/victory/)
 * Rotas: [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 ## O que entregar?
-...
-Git-hub
- Youtube 30min... 
+   Esperamos de você duas entregas: o código da aplicação no Git-Hub e um vídeo explicativo no YouTube 
+### Instruções sobre aplicação
+   Clone... branch... request pull...
+### Instruções sobre vídeo explicativo no YouTube
+   O vídeo duração aproximada de 30min... 
 ## Prazo limite de entrega
 ... No máximo...
