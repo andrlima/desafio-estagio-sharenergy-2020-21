@@ -15,7 +15,8 @@
 ### Parte 3: receita de clientes
    Calcular energia produzida no dia a partir das informações de potência.
    Calcular receita de cada cliente... considerar R$0,95 / kWh.
-   Lembre-se que, por definição, a potência P (kW) é a derivada no tempo t (h) da energia E (kWh), P = dE/dt. Portanto, a energia pode ser calculada a partir da potência por:  
+   Lembre-se que, por definição, a potência P (kW) é a derivada no tempo t (h) da energia E (kWh), P = dE/dt. Portanto, a energia pode ser calculada a partir da potência por: 
+      
    ![Equação para ΔE](equation.jpg)
    <!--
       Imagem gerada pelo site: http://www.sciweavers.org/free-online-latex-equation-editor
