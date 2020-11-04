@@ -1,9 +1,9 @@
-# Desafio para processo seletivo de estágio Sharenergy 2020
+# Desafio para processo seletivo de estágio SHARENERGY 2020
    Esse repositório se destina aos interessados em participar do processo seletivo para estagiários da SHARENERGY 2020. As vagas são voltadas para desenvolvimento de aplicação para Web.
-## SOBRE A SHARENERGY
+## Sobre a SHARENERGY
 Acreditamos que as energias renováveis terão um lugar dominante em nossa economia pelo resto de nossas vidas. Trabalhamos no sentido de ampliar o impacto positivo que as energias renováveis podem ter no meio ambiente e nas nossas vidas. O sucesso da SHARENERGY é resultado de nossa equipe apaixonada, juntamente com nosso compromisso de oferecer a melhor solução.
 
-## SOBRE A VAGA
+## Sobre a vaga
 Já pensou em potencializar o setor que mais cresce na galáxia e trabalhar com uma solução que utiliza tecnologia web de ponta, altamente distribuída com foco em performance e disponibilidade? 👀
 
 Os desenvolvedores da Sharenergy são responsáveis por criar e manter aplicações para clientes internos e externos, prover soluções escaláveis, resilientes e altamente disponíveis que sustentem picos de acesso além de atuar como referência técnica e tutores de outros desenvolvedores. Procuramos por pessoas dinâmicas e que queiram estar aprendendo sempre. Nossa equipe é jovem, motivada e estamos sempre em busca de soluções criativas para alcançar os resultados que nossos clientes esperam. Se você tem esse perfil, é autoconfiante e tem facilidade para lidar com desafios diários, essa vaga é para você! 
