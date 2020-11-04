@@ -10,17 +10,15 @@ Já pensou em potencializar o setor que mais cresce na galáxia e trabalhar com 
 Os desenvolvedores da Sharenergy são responsáveis por criar e manter aplicações para clientes internos e externos, prover soluções escaláveis, resilientes e altamente disponíveis que sustentem picos de acesso além de atuar como referência técnica e tutores de outros desenvolvedores. Procuramos por pessoas dinâmicas e que queiram estar aprendendo sempre. Nossa equipe é jovem, motivada e estamos sempre em busca de soluções criativas para alcançar os resultados que nossos clientes esperam. Se você tem esse perfil, é autoconfiante e tem facilidade para lidar com desafios diários, essa vaga é para você!
 
 ## O desafio
-   Criar um aplicativo para Web que atenda às demandas listadas abaixo. O aplicativo deve apresentar uma interface amigável e bonita.
+   Criar uma aplicação para Web que atenda às demandas listadas abaixo. O aplicativo deve apresentar uma interface amigável, bonita e limpa, na qual o usuário possa navegar por meio botões para obter suas informações de interesse.
+### Contexto
+   No ramo da produção de energia fotovotaica, há a modalidade de produção compartilhada. Nessa modalidade, diferentes pessoas investem na construção de uma mesma usina fotovoltaica e dividem o retorno finaceiro referente à energia gerada. A aplicação desenvolvida no desafio visa gerenciar as informações de produção de usina fotovoltaica e de seus clientes (investidores).
 ### Demanda 1: visualização de dados de uma usina fotovoltaica
-   O aplicativo deve ler os dados contidos no objeto [dadosUsina.json](dadosUsina.json), que contém informações de um dia de produção de uma usina fotovotaica. Em seguida, plotar os dados em um gráfico da variável de interesse (tensão, corrente, potência ou temperatura) em função do tempo. O aplicação deve plotar apenas uma variável por vez e possuir uma opção que permita escolher qual variável será mostrada. Para tanto, pode-se utilizar, por exemplo, uma lista suspensa ou um radio.
+   A aplicação deve ler os dados contidos no objeto [dadosUsina.json](dadosUsina.json), que contém informações de um dia de produção de uma usina fotovotaica. Em seguida, a aplicação deve plotar os dados em um gráfico de uma variável de interesse (tensão, corrente, potência ou temperatura) em função do tempo. O aplicação deve plotar apenas uma variável por vez e possuir uma opção que permita o usuário escolher qual variável será mostrada. Para tanto, pode-se utilizar, por exemplo, uma lista suspensa ou um radio.
 ### Demanda 2: gerenciamento de clientes
-   Clientes...
-   Usar dados de arquivo... iniciar banco de dados
-   CRUD...
+   A aplicação deve ser capaz de gerenciar os dados dos clientes da usina fotovoltaica. Para esse desafio, são fornecidos dados fictícios de clientes no objeto [dadosClientes.json](dadosClientes.json), que devem ser usados para inicializar o banco de dados de clientes. A aplicação deve possuir recursos básicos de CRUD (Create, Read, Update, and Delete) de modo que seja possível adicionar e deleter clientes, editar os dados de um cliente específico e exibir as informações de todos os clientes.
 ### Demanda 3: receita de clientes
-   Calcular energia produzida no dia a partir das informações de potência.
-   Calcular receita de cada cliente... considerar R$0,95 / kWh.
-   Lembre-se que, por definição, a potência P (kW) é a derivada no tempo t (h) da energia E (kWh), P = dE/dt. Portanto, a energia pode ser calculada a partir da potência por: 
+   A aplicação deve estimar a receita obtida por cada cliente oriunda da energia produzida pela usina fotovoltaica no dia. Primeiramete, a aplicação deve calcular energia produzida no dia usando as informações de potência em função do tempo disponíveis no objeto [dadosUsina.json](dadosUsina.json). Lembre-se que, fisicamente, a potência P (kW) é a derivada no tempo t (h) da energia E (kWh), P = dE/dt. Portanto, a energia gerada pode ser calculada a partir da potência por: 
       
    ![Equação para ΔE](equation.jpg)
    <!--
@@ -28,17 +26,18 @@ Os desenvolvedores da Sharenergy são responsáveis por criar e manter aplicaç�
       Foi usado o comando LaTeX: " \Delta E = \int_{t_0}^{t_f}P(t)dt  \approx \Delta t  \sum_{i = 1}^{N-1} P(t_i) "
       Font: Arev (padrão), Font size: 12 (padrão)
    -->
-   Em que ΔE é a energia gerada (kWh), t<sub>0</sub> é o instante de tempo inicial (h), t<sub>f</sub> é o instante de tempo final (h), Δt é o intervalo de tempo em que os dados são amostrados (h), i indica a posição do dado no registro (i = 1, ..., N) e N é o número total de dados amostrados.  
-### Opcional
-   O aplicativo do desafio pode ser enriquecido com recursos pensados por você. Algumas sugestões:
+   Em que ΔE é a energia gerada (kWh), t<sub>0</sub> é o instante de tempo inicial (h), t<sub>f</sub> é o instante de tempo final (h), Δt é o intervalo de tempo em que os dados foram amostrados (h), i indica a posição do dado no registro (i = 1, ..., N) e N é o número total de dados amostrados.  
+   De posse dos valores da energia gerada (ΔE) e do preço da energia (considere R$0,95 / kWh), a receita total pode ser facilmente obtida. Por fim, a receita de cada cliente pode ser calculada com base no percentual de cada da usina. No caso dos dados de clientes fornecidos, essa informação está na chave "percentualUsina" do objeto [dadosClientes.json](dadosClientes.json).
+### Aprimoramentos (opcional)
+   A aplicação do desafio pode ser aprimorada com recursos pensados por você. A seguir, estão listadas algumas sugestões:
 * Documentação
 * Responsividade
 * Contas de usuário
    * Proteção contras modiificações de pessoas não autorizadas
-* Estatística descritiva dos dados dos gráficos
-* Formulário de clientes com mais campos
+* Estatística descritiva dos dados dos gráficos (por exemplo, média, desvio-padrão, mínimo, máximo, etc.)
+* Adicionar mais campos aos formulários de criação e edição de clientes.
 * Implementação de fórmula mais precisa de integração numérica para o cálculo de ΔE
-* Validação dos dados 
+* Realizar validação dos dados 
 ### Quais ferramentas posso usar?
    Não será especificado... código que já faça o mesmo...
    Não obstante. usar as mesmas ferramentas que trabalhamos será um diferencial. 
