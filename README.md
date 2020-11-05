@@ -1,5 +1,5 @@
 # Desafio para processo seletivo de estágio SHARENERGY 2020/21
-   Esse repositório se destina aos interessados em participar do processo seletivo para estagiários da SHARENERGY 2020/21. As vagas são voltadas para desenvolvimento de aplicação para Web.
+   Esse repositório se destina aos interessados em participar do processo seletivo para estagiários da SHARENERGY 2020/21. As vagas são voltadas para desenvolvimento de aplicação  Web.
 
 ## Sobre a SHARENERGY
 Acreditamos que as energias renováveis terão um lugar dominante em nossa economia pelo resto de nossas vidas. Trabalhamos no sentido de ampliar o impacto positivo que as energias renováveis podem ter no meio ambiente e nas nossas vidas. O sucesso da SHARENERGY é resultado de nossa equipe apaixonada, juntamente com nosso compromisso de oferecer a melhor solução.
@@ -80,4 +80,4 @@ i | Tempo (h) | Potência (kW)
 
    Além disso, faça um vídeo explicativo sobre o que você fez no desafio com duração aproximada de 5 minutos. A facecam é opcional, mas é bem-vinda. O vídeo deve ser postado no YouTube (pode deixar como não listado) e seu link deve ser colocado no README.md do seu projeto.
 ### Prazo limite de entrega
-   O pull request com sua solução do desafio deve ser feito até o dia 23/11/2020.
+   O pull request com sua solução do desafio deve ser feito até a data especificada no corpo do email que você recebeu com a descrição do desafio.
