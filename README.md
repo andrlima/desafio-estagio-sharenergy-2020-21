@@ -1,5 +1,5 @@
-# Desafio para processo seletivo de estágio SHARENERGY 2020
-   Esse repositório se destina aos interessados em participar do processo seletivo para estagiários da SHARENERGY 2020. As vagas são voltadas para desenvolvimento de aplicação para Web.
+# Desafio para processo seletivo de estágio SHARENERGY 2020/21
+   Esse repositório se destina aos interessados em participar do processo seletivo para estagiários da SHARENERGY 2020/21. As vagas são voltadas para desenvolvimento de aplicação para Web.
 
 ## Sobre a SHARENERGY
 Acreditamos que as energias renováveis terão um lugar dominante em nossa economia pelo resto de nossas vidas. Trabalhamos no sentido de ampliar o impacto positivo que as energias renováveis podem ter no meio ambiente e nas nossas vidas. O sucesso da SHARENERGY é resultado de nossa equipe apaixonada, juntamente com nosso compromisso de oferecer a melhor solução.
