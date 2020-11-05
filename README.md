@@ -12,7 +12,7 @@ Os desenvolvedores da Sharenergy são responsáveis por criar e manter aplicaç�
 ## O desafio
    Criar uma aplicação para Web que atenda às demandas listadas abaixo. O aplicativo deve apresentar uma interface amigável, bonita e limpa, na qual o usuário possa navegar através de botões.
 ### Contexto
-   No ramo da produção de energia fotovotaica, há a modalidade de produção compartilhada. Nessa modalidade, diferentes pessoas investem na construção de uma mesma usina fotovoltaica e dividem o retorno finaceiro referente à energia gerada pela usina. A aplicação desenvolvida no desafio visa, de maneira bastante simplificada, gerenciar as informações de produção de usinas fotovoltaicas e de nossos clientes (investidores da usina).
+   No ramo da produção de energia fotovotaica, há a modalidade de produção compartilhada. Nessa modalidade, diferentes pessoas investem na construção de uma mesma usina fotovoltaica e dividem o retorno finaceiro referente à energia gerada pela usina. A aplicação desenvolvida no desafio visa, de maneira bastante simplificada, gerenciar as informações de produção de usinas fotovoltaicas e de nossos clientes (investidores das usinas).
 ### Demanda 1: visualização de dados de uma usina fotovoltaica
    A aplicação deve ler os dados contidos no objeto [dadosUsina.json](dadosUsina.json), que contém informações de um dia de produção de uma usina fotovotaica. Em seguida, a aplicação deve plotar os dados em um gráfico de uma variável de interesse (tensão, corrente, potência ou temperatura) em função do tempo. A aplicação deve plotar apenas uma variável por vez no gráfico e possuir uma opção que permita o usuário escolher qual variável será mostrada. Para tanto, pode-se utilizar, por exemplo, uma lista suspensa ou um input radio.
 ### Demanda 2: gerenciamento de clientes
@@ -27,8 +27,19 @@ Os desenvolvedores da Sharenergy são responsáveis por criar e manter aplicaç�
       Font: Arev (padrão), Font size: 12 (padrão)
    -->
    Em que ΔE é a energia gerada (kWh), t<sub>0</sub> é o instante de tempo inicial (h), t<sub>f</sub> é o instante de tempo final (h), Δt é o intervalo de tempo em que os dados foram amostrados (h), i indica a posição do dado no registro (i = 1, ..., N) e N é o número total de dados amostrados.
-     
-   De posse dos valores da energia gerada (ΔE) e do preço da energia elétrica (considere R$0,95 / kWh), a receita total pode ser facilmente determinada. Por fim, o retorno de cada cliente pode ser calculado com base no percentual de participação de cada cliente em relação a uma usina. No caso dos dados de clientes fornecidos, essa informação está na chave "percentualUsina" do objeto [dadosClientes.json](dadosClientes.json).
+
+   Por exemplo, para os dados hipotéticos apresentados na tabela abaixo:
+i | Tempo (h) | Potência (kW)
+:---: | :---: | :---:
+1 | 6 | 5
+2 | 11 | 20
+3 | 16 | 15
+4 | 21 | 0
+   O intervalo de tempo de amostragem é: Δt = 11 h - 6h = 16 h - 11 h = 21 h - 16 h = 5 h. O número total de dados é: N = 4. E a energia gerada no dia é: ΔE = 5 h &times; (5 kW + 20 kW + 15 kW) = 5 h &times; 40 kW = 200 kWh.
+   
+   De posse dos valores da energia gerada (ΔE) e do preço da energia elétrica (considere R$0,95 / kWh), a receita total pode ser facilmente determinada. Por fim, o retorno de cada cliente pode ser calculado com base no percentual de participação de cada cliente em relação a usina. No caso dos dados de clientes fornecidos, essa informação está na chave "percentualUsina" do objeto [dadosClientes.json](dadosClientes.json).
+
+   No exemplo anterior, como a usina produziu 200 kWh no dia, a receita total no dia é: 200 kWh &times; R$0,95 / kWh = R$190,00. Além disso, se dois clientes tiverem cada 50% de participação da usina, cada cliente terá um retorno de: (50 / 100) &times; R$190,00 = R$95,00.
 ### Aprimoramentos adicionais da aplicação (opcional)
    A aplicação criada para o desafio pode ser aprimorada com recursos pensados por você. A seguir, foram listadas algumas sugestões do que poderia ser feito:
 * Documentação
