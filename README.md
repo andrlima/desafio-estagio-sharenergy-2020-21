@@ -14,9 +14,13 @@ Os desenvolvedores da Sharenergy são responsáveis por criar e manter aplicaç�
 ### Contexto
    No ramo da produção de energia fotovotaica, há a modalidade de produção compartilhada. Nessa modalidade, diferentes pessoas investem na construção de uma mesma usina fotovoltaica e dividem o retorno finaceiro referente à energia gerada pela usina. A aplicação desenvolvida no desafio visa, de maneira bastante simplificada, gerenciar as informações de produção de usinas fotovoltaicas e de nossos clientes (investidores das usinas).
 ### Demanda 1: visualização de dados de uma usina fotovoltaica
-   A aplicação deve ler os dados contidos no objeto [dadosUsina.json](dadosUsina.json), que contém informações de um dia de produção de uma usina fotovotaica. Em seguida, a aplicação deve plotar os dados em um gráfico de uma variável de interesse (tensão, corrente, potência ou temperatura) em função do tempo. A aplicação deve plotar apenas uma variável por vez no gráfico e possuir uma opção que permita o usuário escolher qual variável será mostrada. Para tanto, pode-se utilizar, por exemplo, uma lista suspensa ou um input radio.
+   A aplicação deve ler os dados contidos no objeto [dadosUsina.json](dadosUsina.json), que contém informações de um dia de produção de uma usina fotovotaica. Nesse objeto, "tempo_h" denota o horário em horas decimais. Por exemplo, o horário de 5h e 45min corresponde a "tempo_h": 5.75. Além disso,"tensao_V" é a tensão elétrica em volts, "corrente_A" é a corrente elétrica em amperes, "potencia_kW" é a potência gerada em kilowatts e "temperatura_C" é a temperatura em graus Celsius.
+   
+   Após a leitura dos dados, a aplicação deve os plotar em um gráfico de uma variável de interesse (tensão, corrente, potência ou temperatura) em função do tempo. A aplicação deve plotar apenas uma variável por vez no gráfico e possuir uma opção que permita o usuário escolher qual variável será mostrada. Para tanto, pode-se utilizar, por exemplo, uma lista suspensa ou um input radio.
 ### Demanda 2: gerenciamento de clientes
-   A aplicação deve ser capaz de gerenciar os dados de nossos clientes, isto é, dos investidores de uma usina fotovoltaica. Para esse desafio, são fornecidos dados fictícios de clientes no objeto [dadosClientes.json](dadosClientes.json), que devem ser usados para inicializar o banco de dados de clientes. A aplicação deve possuir os recursos básicos de CRUD Read e Update de modo que seja possível editar os dados de um cliente específico e exibir as informações de todos os clientes.
+   A aplicação deve ser capaz de gerenciar os dados de nossos clientes, isto é, de investidores de usinas fotovoltaicas. Para esse desafio, são fornecidos dados fictícios de clientes no objeto [dadosClientes.json](dadosClientes.json), que devem ser usados para inicializar o banco de dados de clientes. Nesse objeto, "numeroCliente" é o número de referência do cliente em nosso sistema, "nomeCliente" é o nome do cliente, "usinas" lista as usinas que o cliente tem participação, "numeroUsina" é o número de referência da usina em nosso sistema e "percentualUsina" é o percentual de participação do cliente na usina.
+   
+   A aplicação deve possuir os recursos básicos de CRUD Read e Update de modo que seja possível editar os dados de um cliente específico e exibir as informações de todos os clientes.
 ### Demanda 3: retorno financeiro dos clientes
    A aplicação deve estimar o retorno financeiro obtido por cada cliente oriundo da energia produzida pela usina fotovoltaica no dia. Primeiramete, a aplicação deve calcular a energia elétrica total produzida no dia usando as informações de potência em função do tempo disponíveis no objeto [dadosUsina.json](dadosUsina.json). Lembre-se que, fisicamente, a potência P (kW) é a derivada no tempo t (h) da energia E (kWh), P = dE/dt. Portanto, a energia gerada pode ser calculada a partir da potência por: 
       
@@ -31,10 +35,11 @@ Os desenvolvedores da Sharenergy são responsáveis por criar e manter aplicaç�
    Por exemplo, para os dados hipotéticos apresentados na tabela abaixo:
 i | Tempo (h) | Potência (kW)
 :---: | :---: | :---:
-1 | 6 | 5
-2 | 11 | 20
-3 | 16 | 15
-4 | 21 | 0
+1 | 6,0 | 5,0
+2 | 11,0 | 20,0
+3 | 16,0 | 15,0
+4 | 21,0 | 0,0
+
    O intervalo de tempo de amostragem é: Δt = 11 h - 6h = 16 h - 11 h = 21 h - 16 h = 5 h. O número total de dados é: N = 4. E a energia gerada no dia é: ΔE = 5 h &times; (5 kW + 20 kW + 15 kW) = 5 h &times; 40 kW = 200 kWh.
    
    De posse dos valores da energia gerada (ΔE) e do preço da energia elétrica (considere R$0,95 / kWh), a receita total pode ser facilmente determinada. Por fim, o retorno de cada cliente pode ser calculado com base no percentual de participação de cada cliente em relação a usina. No caso dos dados de clientes fornecidos, essa informação está na chave "percentualUsina" do objeto [dadosClientes.json](dadosClientes.json).
